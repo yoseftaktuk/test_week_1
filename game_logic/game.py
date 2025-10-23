@@ -22,6 +22,15 @@ def init_game():
 def play_round(p1:dict,p2:dict):
     if len(p1['hand']) == 0 or len(p1['hand']) == 0:
         print('game over')
+        if len(p1['hand']) > 0:
+            print('player 1 won')
+            return
+        elif len(p2['hand']) > 0:
+            print('player 2 won')
+            return
+        elif len(p1['hand']) == 0 and len(p2['hand']) == 0:
+            print('Its a draw')
+            return
     else:
         hand_1 = p1['hand'].pop()
         hand_2 = p2['hand'].pop()

@@ -10,4 +10,4 @@ if __name__ == "__main__":
     game.play_round(c['player_1'],c['player_2'])
     game.play_round(c['player_1'],c['player_2'])
     game.play_round(c['player_1'],c['player_2'])
-    game.play_round(c['player_1'], c['player_2'])
+
