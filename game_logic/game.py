@@ -20,18 +20,21 @@ def init_game():
             'player_2':player_2}
 
 def play_round(p1:dict,p2:dict):
-    hand_1 = p1['hand'].pop()
-    hand_2 = p2['hand'].pop()
-    if hand_1['value'] > hand_2['value']:
-            p1['won_pile'].append(hand_1)
-            p1['won_pile'].append(hand_2)
-            print('hand 1 won!!!')
-    elif hand_1['value'] == hand_2['value']:
-        print('Its a draw')
+    if len(p1['hand']) == 0 or len(p1['hand']) == 0:
+        print('game over')
     else:
-        p2['won_pile'].append(hand_1)
-        p2['won_pile'].append(hand_2)
-        print('hand 2 won!!!')
+        hand_1 = p1['hand'].pop()
+        hand_2 = p2['hand'].pop()
+        if hand_1['value'] > hand_2['value']:
+                p1['won_pile'].append(hand_1)
+                p1['won_pile'].append(hand_2)
+                print('hand 1 won!!!')
+        elif hand_1['value'] == hand_2['value']:
+            print('Its a draw')
+        else:
+            p2['won_pile'].append(hand_1)
+            p2['won_pile'].append(hand_2)
+            print('hand 2 won!!!')
 
 
 
